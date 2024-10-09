@@ -1,0 +1,391 @@
+/* --------------------------------------------------- */
+/* Reset and Base Styles */
+/* --------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #EAEDED;
+}
+
+/* --------------------------------------------------- */
+/* Header Styles */
+/* --------------------------------------------------- */
+header {
+  position:sticky;
+  top: 0;
+  background-color: #f7eebd; /* Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: calc(10px + 1rem) 20px; /* Reduced padding for height */
+}
+
+.header-top {
+  display:flex; /* Flex layout for header elements */
+  align-items:center; /* Vertically center elements */
+  justify-content: space-between; /* Space out elements */
+  height: calc(8px + 1rem); /* Adjusted height for the header */
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.location {
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.location button {
+  padding: 1px;
+  background-color: #131921;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.country-select {
+  margin-left: 20px;
+}
+
+.country-select img {
+  height: 50%;
+  width: 10%;
+}
+/* --------------------------------------------------- */
+/* Navbar Styles */
+/* --------------------------------------------------- */
+.main-nav {
+  position:sticky;
+  top: 0;
+  background-color: #232F3E; /* Background color for navbar */
+  padding: 5px 20px; /* Padding for navbar */
+}
+
+.main-nav ul {
+  display: flex;
+  list-style-type: none; /* No list styling */
+}
+
+.main-nav li {
+  margin-right: 15px; /* Space between navbar items */
+}
+
+.main-nav a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: calc(14px + 0.5vw); /* Responsive font size */
+}
+
+.main-nav a:hover {
+  text-decoration:underline; /* Underline on hover */
+}
+
+/* --------------------------------------------------- */
+/* Search Bar Styles */
+/* --------------------------------------------------- */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  position: relative;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search button {
+  padding: 10px;
+  background-color: #dbb621; /* Changed background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #0056b3; /* Hover effect color */
+}
+
+/* Search results dropdown */
+.search-results {
+  position: absolute;
+  top: 50px;
+  width: calc(100% - 110px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+}
+
+.search-results li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Handle overflow */
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* --------------------------------------------------- */
+/* Hero Banner Styles */
+/* --------------------------------------------------- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #a55422;
+}
+
+.hero-banner .slide {
+  display: none;
+  width: 50%;
+  height: 50%;
+  position:absolute;
+  top:auto;
+  left:auto;
+  justify-items: center;
+  transition: "opacity 10s ease-in-out";
+}
+
+.hero-banner .slide img {
+  width: 80%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.hero-banner .slide.active {
+  display: block; /* Show active slide */
+}
+
+.hero-banner .next-btn, .hero-banner .prev-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Ensure it's visible */
+  color: white; /* Text color */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10; /* Make sure they are above other elements */
+}
+
+.hero-banner .prev-btn {
+  left: 10px;
+}
+
+.hero-banner .next-btn {
+  right: 10px;
+}
+
+/* --------------------------------------------------- */
+/* Product Grid Styles */
+/* --------------------------------------------------- */
+.product-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 20px 0; /* Space around product grid */
+}
+
+.grid-item {
+  flex: 0 0 auto; /* Fixed size for items */
+  width: 300px; /* Width for each item */
+  margin-right: 20px; /* Space between items */
+  background-color: #f3f3f3; /* Background color for items */
+  text-align: center; /* Center text */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside items */
+}
+
+.grid-item h2 {
+  font-size: 18px; /* Font size for item title */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.product-image img {
+  max-width: 100%; /* Responsive image */
+  height: auto;
+  margin: 0 auto; /* Center image */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+.see-all {
+  color: #007185; /* Color for "See All" link */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Bold text */
+}
+
+.see-all:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* --------------------------------------------------- */
+/* Mobile Carousel Styles */
+/* --------------------------------------------------- */
+.mobile-carousel {
+  background-color: white; /* Background for mobile carousel */
+  padding: 20px; /* Padding for mobile carousel */
+  margin-bottom: 20px; /* Space below carousel */
+  overflow-x: auto; /* Horizontal scrolling */
+  white-space: nowrap; /* No line breaks */
+}
+
+.blockbuster-deals {
+  background-color: white; /* Background for blockbuster deals */
+  padding: 20px; /* Padding for deals section */
+  margin-bottom: 20px; /* Space below deals section */
+}
+
+.deal-carousel {
+  display: flex; /* Flex layout for deals */
+  overflow-x: auto; /* Horizontal scrolling */
+}
+
+/* --------------------------------------------------- */
+/* Footer Styles */
+/* --------------------------------------------------- */
+.back-to-top {
+  background-color: #37475A; /* Background for back-to-top button */
+  color: white; /* Text color */
+  text-align: center; /* Centered text */
+  padding: 15px 0; /* Padding for button */
+}
+
+.back-to-top a {
+  color: white; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+footer {
+  background-color: #232F3E; /* Background color for footer */
+  color: white; /* Text color */
+  padding: 40px 0; /* Padding for footer */
+}
+
+.footer-content {
+  display: flex; /* Flex layout for footer columns */
+  justify-content: space-around; /* Space out columns */
+  flex-wrap: wrap; /* Wrap columns on smaller screens */
+  max-width: 1000px; /* Max width for footer content */
+  margin: 0 auto; /* Center footer content */
+}
+
+.footer-column {
+  flex: 1; /* Flexible column width */
+  padding: 0 15px; /* Padding for columns */
+  margin-bottom: 20px; /* Space below columns */
+}
+
+.footer-column h3 {
+  font-size: 16px; /* Font size for column title */
+  margin-bottom: 15px; /* Space below title */
+}
+
+.footer-column ul {
+  list-style-type: none; /* No list styling */
+  padding: 0; /* Reset padding */
+}
+
+.footer-column ul li {
+  margin-bottom: 10px; /* Space below list items */
+}
+
+.footer-column ul li a {
+  color: #DDD; /* Link color */
+  text-decoration: none; /* No underline */
+  font-size: 14px; /* Font size for links */
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* --------------------------------------------------- */
+/* Responsive Design */
+/* --------------------------------------------------- */
+@media (max-width: 768px) {
+  .search {
+    width: 100%; /* Full width for search on smaller screens */
+    max-width: 100%; /* No max width */
+  }
+
+  .product-grid {
+    flex-wrap: wrap; /* Wrap items in product grid */
+    justify-content: center; /* Center items */
+  }
+
+  .grid-item {
+    flex: 0 0 100%; /* Full width for grid items */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space below items */
+  }
+
+  .logo img {
+    width: 30%; /* Smaller logo on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap; /* Wrap navbar items */
+  }
+
+  .hero-banner {
+    height: 250px; /* Smaller hero banner */
+  }
+}
+
+@media (max-width: 576px) {
+  .search {
+    width: 100%; /* Full width for search on very small screens */
+    max-width: 100%; /* No max width */
+  }
+
+  .header-top,
+  .main-nav ul {
+    flex-wrap: wrap; /* Wrap header and navbar items */
+    justify-content: center; /* Center items */
+  }
+
+  .product-grid {
+    display: block; /* Block display for product grid */
+    overflow-x: visible; /* Visible overflow */
+  }
+
+  .grid-item {
+    width: 100%; /* Full width for grid items */
+    margin-right: 0; /* No right margin */
+    margin-bottom: 20px; /* Space below items */
+  }
+
+  .hero-banner {
+    height: 200px; /* Smaller hero banner */
+  }
+
+  .logo img {
+    width: 50%; /* Larger logo on very small screens */
+  }
+}

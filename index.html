@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Online Shopping India</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="logo.png" alt="Amazon.in">
+            </div>
+            <div class="location">
+                <button>
+                Delivering to Mumbai 400019
+                <i class="bi bi-geo-alt-fill"></i>Update location
+                </button>
+            </div>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search">
+                <button id="searchBtn">
+                    <i class="bi bi-search"></i> Search
+                </button>
+                <ul id="searchResults" class="search-results"></ul>
+            </div>
+            
+            <div class="country-select">
+                <img src="india-flag.png" alt="IN">
+                <span>EN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar moved outside of the header -->
+    <nav class="main-nav">
+        <div><a href="index.html">Home</a></div>
+        <ul class="nav-links">
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="hero-banner">
+            <div class="slide active">
+                <img src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/10-10-22/geetanjali/mobile-phones-diwali-page/slider/B2B_Home-Page-Smartphone_Mob.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="https://gphome.gumlet.io/gpcdn/promotions/Diwali-mobile-offers-and-sale-today-gopaisa.jpg?w=400&dpr=2.6" alt="Slide 2">
+            </div>
+            <button class="prev-btn">Prev</button>
+            <button class="next-btn">Next</button>
+        </div>
+        
+        
+        <section class="product-grid">
+            <div class="grid-item">
+                <h2>Up to 40% off | Deals on mobiles and accessories</h2>
+                <div class="product-image">
+                    <!-- Product image -->
+                     <img src="https://m-cdn.phonearena.com/images/hub/372-wide-two_1200/Apple-iPhone-16-release-date-price-and-features.jpg" alt="Iphone 16">
+                </div>
+                <a href="#" class="see-all">See all offers</a>
+            </div>
+            <!-- More grid items -->
+        </section>
+
+        <section class="product-grid">
+            <div class="grid-item">
+                <h2>Up to 40% off | Deals on Samsung</h2>
+                <div class="product-image">
+                    <!-- Product image -->
+                     <img src="https://rukminim2.flixcart.com/image/850/1250/xif0q/mobile/o/s/c/-original-imagx9pfuguwhfhe.jpeg?q=90&crop=false" alt="Samsung">
+                </div>
+                <a href="#" class="see-all">See all offers</a>
+            </div>
+            <!-- More grid items -->
+        </section>
+
+        <section class="product-grid">
+            <div class="grid-item">
+                <h2>Up to 40% off | Deals on Google pixel</h2>
+                <div class="product-image">
+                    <!-- Product image -->
+                     <img src="https://images.fonearena.com/blog/wp-content/uploads/2024/08/Google-Pixel-9.jpg" alt="Google-Pixel-9">
+                </div>
+                <a href="#" class="see-all">See all offers</a>
+            </div>
+            <!-- More grid items -->
+        </section>
+    
+
+        <section class="mobile-carousel">
+            <!-- Mobile carousel content -->
+        </section>
+
+        <section class="deal-sections">
+            <!-- Various deal sections -->
+        </section>
+
+        <section class="blockbuster-deals">
+            <h2>Blockbuster deals</h2>
+            <div class="deal-carousel">
+                <!-- Deal items -->
+            </div>
+        </section>
+    </main>
+
+   <!-- ... (previous HTML code remains unchanged) ... -->
+
+<footer>
+  <div class="back-to-top">
+      <a href="#top">Back to top</a>
+  </div>
+  <div class="footer-content">
+      <div class="footer-column">
+          <h3>Get to Know Us</h3>
+          <ul>
+              <li><a href="#">About Amazon</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press Releases</a></li>
+              <li><a href="#">Amazon Science</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Connect with Us</h3>
+          <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Make Money with Us</h3>
+          <ul>
+              <li><a href="#">Sell on Amazon</a></li>
+              <li><a href="#">Sell under Amazon Accelerator</a></li>
+              <li><a href="#">Protect and Build Your Brand</a></li>
+              <li><a href="#">Amazon Global Selling</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+              <li><a href="#">Fulfilment by Amazon</a></li>
+              <li><a href="#">Advertise Your Products</a></li>
+              <li><a href="#">Amazon Pay on Merchants</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Let Us Help You</h3>
+          <ul>
+              <li><a href="#">Your Account</a></li>
+              <li><a href="#">Returns Centre</a></li>
+              <li><a href="#">100% Purchase Protection</a></li>
+              <li><a href="#">Amazon App Download</a></li>
+              <li><a href="#">Help</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
