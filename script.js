@@ -4,16 +4,16 @@ $(document).ready(function() {
     const slides = $('.hero-banner .slide');
     const totalSlides = slides.length;
 
-    // Function to show the current slide and hide others
+    // Function to show the current slide and hide others with fade effect
     function showSlide(index) {
-        slides.hide(); // Hide all slides
-        slides.eq(index).show(); // Show the current slide
+        slides.fadeOut(500); // Fade out all slides
+        slides.eq(index).fadeIn(1000); // Fade in the current slide with 1s duration
     }
 
-    // Initially show the first slide, only if there are slides
+    // Initially show the first slide
     if (totalSlides > 0) {
         showSlide(currentSlide);
-        setInterval(nextSlide, 10000); // Auto slider
+        setInterval(nextSlide, 10000); // Auto slider every 10 seconds
     }
 
     // Function to move to the next slide
@@ -31,17 +31,6 @@ $(document).ready(function() {
     // Set up event listeners for next and prev buttons
     $('.next-btn').on('click', nextSlide);
     $('.prev-btn').on('click', prevSlide);
-
-    // Reset interval on manual slide change
-    let slideInterval = setInterval(nextSlide, 5000);
-    function resetInterval() {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    $('.next-btn, .prev-btn').on('click', function() {
-        resetInterval(); // Reset the interval when user interacts
-    });
 
     // Search functionality
     const sampleOptions = [
@@ -97,7 +86,7 @@ $(document).ready(function() {
         'margin-right': '20px'
     });
 
-    // Add throttle function
+    // Add throttle function for smooth scrolling
     function throttle(fn, wait) {
         let time = Date.now();
         return function() {
@@ -107,8 +96,6 @@ $(document).ready(function() {
             }
         }
     }
-    // sticky nav bar
-
 
     // Scroll the grid with wheel events
     $('.product-grid').on('wheel', throttle(function(e) {
